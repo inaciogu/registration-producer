@@ -35,7 +35,7 @@ export default function Register() {
         return
       }
 
-      await fetch('http://localhost:3000/api/users', {
+      await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify(data),
       })
@@ -60,7 +60,7 @@ export default function Register() {
         <Stack spacing={2} mb={2}>
           <TextField label="Name" variant="outlined" name="name" value={data.name} onChange={handleChange} />
           <TextField label="Email" variant="outlined" name="email" value={data.email} onChange={handleChange} />
-          <TextField label="Password" variant="outlined" name="password" value={data.password} onChange={handleChange} />
+          <TextField label="Password" variant="outlined" type="password" name="password" value={data.password} onChange={handleChange} />
           <TextField label="Position" variant="outlined" name="position" value={data.position} onChange={handleChange} />
         </Stack>
         <Button variant="contained" type="submit">Registrar</Button>
