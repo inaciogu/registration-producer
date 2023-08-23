@@ -23,7 +23,6 @@ export default function Register() {
   const handleSubmit = async (e: any) => {
     try {
       e.preventDefault()
-      console.log(data)
 
       setLoading(true);
 
