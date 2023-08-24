@@ -63,7 +63,7 @@ export default function Register() {
           <TextField label="Senha" variant="outlined" type="password" name="password" value={data.password} onChange={handleChange} />
           <TextField label="Cargo" variant="outlined" name="position" value={data.position} onChange={handleChange} />
         </Stack>
-        <Button variant="contained" type="submit">Registrar</Button>
+        <LoadingButton loading={loading} variant="contained" type="submit">Registrar</LoadingButton>
       </Card>
       <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogTitle>Cadastro</DialogTitle>
@@ -73,7 +73,7 @@ export default function Register() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <LoadingButton loading={loading} onClick={() => setOpen(false)}>Fechar</LoadingButton>
+          <Button onClick={() => setOpen(false)}>Fechar</Button>
         </DialogActions>
       </Dialog>
     </Container>
