@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>
-        Bem vindo! Faça seu cadastro
+        Bem vindo  <b>Aktie Jobs</b>! Faça seu cadastro
       </h1>
       <Register />
     </main>

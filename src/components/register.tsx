@@ -1,5 +1,6 @@
 'use client'
 
+import { LoadingButton } from "@mui/lab";
 import { Button, Card, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 
@@ -57,10 +58,10 @@ export default function Register() {
     <Container maxWidth="xl" sx={{ display: 'flex', justifyContent: 'center' }}>
       <Card sx={{ p: 2, mt: 2, width: 600 }} component="form" onSubmit={handleSubmit}>
         <Stack spacing={2} mb={2}>
-          <TextField label="Name" variant="outlined" name="name" value={data.name} onChange={handleChange} />
+          <TextField label="Nome" variant="outlined" name="name" value={data.name} onChange={handleChange} />
           <TextField label="Email" variant="outlined" name="email" value={data.email} onChange={handleChange} />
-          <TextField label="Password" variant="outlined" type="password" name="password" value={data.password} onChange={handleChange} />
-          <TextField label="Position" variant="outlined" name="position" value={data.position} onChange={handleChange} />
+          <TextField label="Senha" variant="outlined" type="password" name="password" value={data.password} onChange={handleChange} />
+          <TextField label="Cargo" variant="outlined" name="position" value={data.position} onChange={handleChange} />
         </Stack>
         <Button variant="contained" type="submit">Registrar</Button>
       </Card>
@@ -72,7 +73,7 @@ export default function Register() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setOpen(false)}>Fechar</Button>
+          <LoadingButton loading={loading} onClick={() => setOpen(false)}>Fechar</LoadingButton>
         </DialogActions>
       </Dialog>
     </Container>
